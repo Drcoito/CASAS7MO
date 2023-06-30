@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class MayorVariable {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el valor para la primera variable: ");
+        int variable1 = scanner.nextInt();
+
+        System.out.print("Ingrese el valor para la segunda variable: ");
+        int variable2 = scanner.nextInt();
+
+        System.out.print("Ingrese el valor para la tercera variable: ");
+        int variable3 = scanner.nextInt();
+
+        int mayorVariable = variable1;  // Suponemos que la primera variable es la mayor inicialmente
+
+        if (variable2 > mayorVariable && variable2 > variable3) {
+            mayorVariable = variable2;
+        }
+
+        if (variable3 > mayorVariable && variable3 > variable2) {
+            mayorVariable = variable3;
+        }
+
+        System.out.println("La variable de mayor valor es: " + mayorVariable);
+    }
+}
