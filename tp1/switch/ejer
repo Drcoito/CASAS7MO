@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Categorizacion {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese un número: ");
+        int numero = scanner.nextInt();
+
+        switch (numero) {
+            case 0:
+                System.out.println("Categoría: Hijo");
+                break;
+            case 1:
+                System.out.println("Categoría: Padres");
+                break;
+            case 2:
+                System.out.println("Categoría: Abuelos");
+                break;
+            default:
+                System.out.println("Categoría no válida");
+                break;
+        }
+    }
+}
