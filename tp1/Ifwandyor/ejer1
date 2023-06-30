@@ -1,0 +1,89 @@
+import java.util.Scanner;
+
+public class JuegoPiedraPapelTijera {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Juego de Piedra, Papel y Tijera");
+        System.out.println("0 - Piedra");
+        System.out.println("1 - Papel");
+        System.out.println("2 - Tijera");
+        System.out.println("-----------------------------");
+
+        System.out.print("Competidor 1, ingrese su jugada: ");
+        int jugada1 = scanner.nextInt();
+
+        System.out.print("Competidor 2, ingrese su jugada: ");
+        int jugada2 = scanner.nextInt();
+
+        String resultado;
+
+        if (jugada1 == jugada2) {
+            resultado = "Empate";
+        } else if ((jugada1 == 0 && jugada2 == 2) || (jugada1 == 1 && jugada2 == 0) || (jugada1 == 2 && jugada2 == 1)) {
+            resultado = "Competidor 1 es el ganador";
+        } else {
+            resultado = "Competidor 2 es el ganador";
+        }
+
+        System.out.println("-----------------------------");
+        System.out.println(resultado);
+    }
+}
+En este programa, cada competidor ingresa su jugada representada por un número: 0 para piedra, 1 para papel y 2 para tijera. Se utiliza una serie de estructuras if-else para determinar el ganador según las reglas del juego:
+
+Si ambas jugadas son iguales, se declara un empate.
+Si la jugada del Competidor 1 vence a la jugada del Competidor 2 (piedra vence a tijera, papel vence a piedra, tijera vence a papel), entonces el Competidor 1 es el ganador.
+En cualquier otro caso, el Competidor 2 es el ganador.
+Finalmente, se muestra en pantalla el resultado, indicando si hay un empate o cuál de los competidores es el ganador.
+
+Puedes ejecutar el programa y probar diferentes combinaciones de jugadas para obtener el resultado correspondiente.
+
+
+
+
+
+User
+ Realizar el ejercicio anterior utilizando la sentencia and para resolver el problema
+ChatGPT
+Aquí tienes el código en Java que resuelve el juego de piedra, papel y tijera entre dos competidores utilizando el operador lógico "&&" (AND):
+
+java
+Copy code
+import java.util.Scanner;
+
+public class JuegoPiedraPapelTijera {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Juego de Piedra, Papel y Tijera");
+        System.out.println("0 - Piedra");
+        System.out.println("1 - Papel");
+        System.out.println("2 - Tijera");
+        System.out.println("-----------------------------");
+
+        System.out.print("Competidor 1, ingrese su jugada: ");
+        int jugada1 = scanner.nextInt();
+
+        System.out.print("Competidor 2, ingrese su jugada: ");
+        int jugada2 = scanner.nextInt();
+
+        String resultado;
+
+        if ((jugada1 == 0 && jugada2 == 2) || (jugada1 == 1 && jugada2 == 0) || (jugada1 == 2 && jugada2 == 1)) {
+            resultado = "Competidor 1 es el ganador";
+        } else if ((jugada2 == 0 && jugada1 == 2) || (jugada2 == 1 && jugada1 == 0) || (jugada2 == 2 && jugada1 == 1)) {
+            resultado = "Competidor 2 es el ganador";
+        } else {
+            resultado = "Empate";
+        }
+
+        System.out.println("-----------------------------");
+        System.out.println(resultado);
+    }
+}
+En este código, se utilizan las expresiones condicionales dentro de los if utilizando el operador lógico "&&" (AND) para evaluar las combinaciones de jugadas que determinan al ganador:
+
+Si la jugada del Competidor 1 es piedra (0) y la jugada del Competidor 2 es tijera (2), o si la jugada del Competidor 1 es papel (1) y la jugada del Competidor 2 es piedra (0), o si la jugada del Competidor 1 es tijera (2) y la jugada del Competidor
+
+
